@@ -1,5 +1,15 @@
 declare module 'astro:content' {
 	interface Render {
+		'.mdx': Promise<{
+			Content: import('astro').MarkdownInstance<{}>['Content'];
+			headings: import('astro').MarkdownHeading[];
+			remarkPluginFrontmatter: Record<string, any>;
+		}>;
+	}
+}
+
+declare module 'astro:content' {
+	interface Render {
 		'.md': Promise<{
 			Content: import('astro').MarkdownInstance<{}>['Content'];
 			headings: import('astro').MarkdownHeading[];
@@ -101,17 +111,131 @@ declare module 'astro:content' {
 	>;
 
 	const entryMap: {
-		"drafts": {
-"sample-draft-post.md": {
-  id: "sample-draft-post.md",
-  slug: "sample-draft-post",
+		"blog": {
+"2000-01-01-template.md": {
+  id: "2000-01-01-template.md",
+  slug: "2000-01-01-template",
   body: string,
-  collection: "drafts",
-  data: any
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] },
+"2022-08-09-mit-licence.md": {
+  id: "2022-08-09-mit-licence.md",
+  slug: "2022-08-09-mit-licence",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] },
+"2022-08-10-markdown-cheat-sheet.md": {
+  id: "2022-08-10-markdown-cheat-sheet.md",
+  slug: "2022-08-10-markdown-cheat-sheet",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] },
+"2022-08-19-sample-carousel.mdx": {
+  id: "2022-08-19-sample-carousel.mdx",
+  slug: "2022-08-19-sample-carousel",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] },
+"2022-08-20-mermaid-diagrams.md": {
+  id: "2022-08-20-mermaid-diagrams.md",
+  slug: "2022-08-20-mermaid-diagrams",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] },
+"2022-08-21-sample-gallery-post.mdx": {
+  id: "2022-08-21-sample-gallery-post.mdx",
+  slug: "2022-08-21-sample-gallery-post",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] },
+"2022-08-22-sample-gallery-post-markdown.md": {
+  id: "2022-08-22-sample-gallery-post-markdown.md",
+  slug: "2022-08-22-sample-gallery-post-markdown",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] },
+"2022-08-23-sample-mdx-post.mdx": {
+  id: "2022-08-23-sample-mdx-post.mdx",
+  slug: "2022-08-23-sample-mdx-post",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] },
+"2022-08-24-math-equations.md": {
+  id: "2022-08-24-math-equations.md",
+  slug: "2022-08-24-math-equations",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] },
+"2022-08-25-plantuml-diagrams.md": {
+  id: "2022-08-25-plantuml-diagrams.md",
+  slug: "2022-08-25-plantuml-diagrams",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] },
+"2022-08-26-markmap-diagrams.md": {
+  id: "2022-08-26-markmap-diagrams.md",
+  slug: "2022-08-26-markmap-diagrams",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] },
+"2022-08-27-how-to-use.md": {
+  id: "2022-08-27-how-to-use.md",
+  slug: "2022-08-27-how-to-use",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] },
+"2023-01-26-roadmap.md": {
+  id: "2023-01-26-roadmap.md",
+  slug: "2023-01-26-roadmap",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] },
+},
+"doc": {
+"introduction.md": {
+  id: "introduction.md",
+  slug: "introduction",
+  body: string,
+  collection: "doc",
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] },
+"page-2.md": {
+  id: "page-2.md",
+  slug: "page-2",
+  body: string,
+  collection: "doc",
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] },
+"page-3.md": {
+  id: "page-3.md",
+  slug: "page-3",
+  body: string,
+  collection: "doc",
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] },
+"page-4.md": {
+  id: "page-4.md",
+  slug: "page-4",
+  body: string,
+  collection: "doc",
+  data: InferEntrySchema<"doc">
 } & { render(): Render[".md"] },
 },
 
 	};
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("../src/content/config");
 }
