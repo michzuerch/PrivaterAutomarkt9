@@ -1,15 +1,38 @@
 {
-  "name": "hello-astro",
-  "description": "Hello Astro is a full featured Astro corporate/marketing/blog starter theme written in Typescript and TailwindCSS. It supports Markdown and MDX based pages and blog posts.",
-  "version": "1.0.1",
+  "name": "@michzuerch/privaterautomarkt9",
+  "description": "Homepage Privater Automarkt Radolfzell with Astro and Tailwind.",
+  "version": "0.9.1",
+  "private": true,
+  "homepage": "https://github.com/michzuerch/PrivaterAutomarkt9#readme",
+  "author": {
+    "name": "Michael Zuercher",
+    "email": "michzuerch@gmail.com",
+    "url": "https://github.io/michzuerch"
+  },
+  "repository": "github:michzuerch/PrivaterAutomarkt9",
+  "keywords": [
+    "Homepage",
+    "Privater Automarkt",
+    "billig-car.de",
+    "Radolfzell"
+  ],
+  "displayName": "Privater Automarkt 9",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "clean": "rimraf dist .astro node_modules",
+    "build:clean": "sudo rm -rf ./playwright-report/mobile-* && sudo rm -rf ./playwright-report/desktop-*",
+    "build:docker": "docker build -t privaterautomarkt8-playwright:latest .",
+    "test:docker": "docker run --name privaterautomarkt8-playwright --rm -v $(pwd)/playwright-report:/app/playwright-report -p 9323:9323 --network host privaterautomarkt8-playwright:latest",
+    "test": "LOCAL_TEST=1 npx playwright test",
+    "test:snapshots": "LOCAL_TEST=1 npx playwright test --update-snapshots",
+    "test:lighthouse": "npx lighthouse http://localhost:3000/ --output html --output-path lighthouse-result.html view",
     "preview": "astro preview",
-    "format": "prettier --write .",
-    "lint": "astro check",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier -w .",
+    "lint:eslint": "eslint . --ext .js,.ts,.astro",
+    "subfont": "subfont -ir --no-fallbacks --silent --root dist"
   },
   "devDependencies": {
     "@akebifiky/remark-simple-plantuml": "^1.0.2",
