@@ -20,8 +20,8 @@ export default defineConfig({
       noExternal: ['swiper', 'leaflet'],
     },
   },
-  site: 'https://michzuerch.github.io',
-  base: '/privaterautomarkt9',
+  site: 'http://localhost:3000',
+  base: '/',
   integrations: [
     tailwind(),
     sitemap(),

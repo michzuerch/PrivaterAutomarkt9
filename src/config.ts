@@ -10,35 +10,35 @@ export interface TagType {
 }
 
 export const SiteMetadata = {
-  title: 'Hello Astro',
-  description: 'An Astro starter for corporate/marketing/blog websites.',
+  title: 'Privater Automarkt Radolfzell',
+  description:
+    'Homepage Privater Automarkt in Radolfzell, corporate/marketing/blog.',
   author: {
-    name: 'Chris Tham',
-    twitter: '@chris1tham',
-    url: 'https://christham.net',
-    email: 'chris@christham.net',
-    summary: 'Outrageous actualiser.',
+    name: 'Michael Zuercher',
+    twitter: '@michzuerch',
+    url: 'https://michzuerch.github.io',
+    email: 'michzuerch@gmail.com',
+    summary: 'Webdesign.',
   },
   org: {
-    name: 'Hello Tham',
-    twitter: '@hellothamcom',
-    url: 'https://hellotham.com',
-    email: 'info@hellotham.com',
-    summary:
-      'Hello Tham is a boutique management consulting firm. We specialise in Business and IT strategies, operating models, strategic roadmaps, enterprise architecture, analytics and business process design.',
+    name: 'Privater Automarkt',
+    twitter: '@billigcar',
+    url: 'https://www.billig-car.de',
+    email: 'info@billig-car.de',
+    summary: 'Autohandel',
   },
-  location: 'Rivendell, Middle Earth',
-  latlng: [-33.86785, 151.20732] as [number, number],
-  repository: 'https://github.com/hellotham/hello-astro',
+  location: 'Herrenlandstrasse 39, Radolfzell',
+  latlng: [47.74297128003603, 8.954879380531835] as [number, number],
+  repository: 'https://github.com/michzuerch/PrivaterAutomarkt9',
   social: [
     {
       name: 'Email',
-      link: 'mailto:info@hellothamcom',
+      link: 'mailto:info@billig-car.de',
       icon: 'envelope',
     },
     {
-      name: 'Phone',
-      link: '555-5555',
+      name: 'Telefon',
+      link: '+49 - (0)7732-942407',
       icon: 'telephone',
     },
     {
@@ -63,7 +63,7 @@ export const SiteMetadata = {
     },
     {
       name: 'Github',
-      link: 'https://github.com/hellothamcom',
+      link: 'https://github.com/michzuerch/PrivaterAutomarkt9',
       icon: 'github',
     },
   ],
@@ -114,18 +114,18 @@ export function categoryDetail(category: string | undefined) {
 }
 export const AuthorDetail = [
   {
-    name: 'Chris Tham',
-    description: 'Hello World',
-    contact: 'chris@christham.net',
-    image: '../images/authors/Chris Tham.jpg',
+    name: 'Michael Zuercher',
+    description: 'Webmaster',
+    contact: 'michzuerch@gmail.com',
+    image: '../images/authors/Michael Zuercher.jpg',
   },
 ]
 
 export const DefaultAuthor = {
-  name: 'Hello Astro',
+  name: 'Michael Zuercher',
   image: '../images/authors/default.png',
-  contact: 'info@hellotham.com',
-  description: 'Astronaut',
+  contact: 'michzuerch@gmail.com',
+  description: 'Webmaster',
 }
 
 export function authorDetail(author: string | undefined) {
@@ -139,7 +139,7 @@ export function authorDetail(author: string | undefined) {
 
 export const PAGE_SIZE = 6
 
-export const GITHUB_EDIT_URL = `https://github.com/hellotham/hello-astro`
+export const GITHUB_EDIT_URL = `https://github.com/michzuerch/PrivaterAutomarkt9`
 
 export const COMMUNITY_INVITE_URL = `https://astro.build/chat`
 
