@@ -24,6 +24,6 @@ export async function get() {
         pubDate: post.data.publishDate.toString(),
       })),
     // (optional) inject custom xml
-    customData: `<language>en</language>`,
+    customData: `<language>de</language>`,
   })
 }

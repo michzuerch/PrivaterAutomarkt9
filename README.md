@@ -80,8 +80,6 @@ Hello Astro is a full featured [Astro](https://astro.build) multi-purpose starte
 
 ![Dark](https://github.com/hellotham/hello-astro/raw/main/screenshot-dark.png)
 
-![Lighthouse](https://github.com/hellotham/hello-astro/raw/main/lighthouse.png)
-
 Hello Astro can used for any/all of the following:
 
 - corporate/marketing site
