@@ -18,25 +18,25 @@ const otherPosts = posts.slice(1, 5)
     <div class="mx-auto max-w-2xl py-8 sm:py-12 lg:max-w-none lg:py-16">
       <div class="flex flex-row items-center">
         <h2
-          class="text-2xl font-extrabold text-purple-800 dark:text-purple-200 md:text-4xl"
+          class="text-2xl font-extrabold text-amber-800 dark:text-amber-200 md:text-4xl"
         >
           Our Latest Articles
         </h2>
         <a
           href={import.meta.env.BASE_URL + 'blog'}
-          class="ml-4 mt-2 inline-block rounded-md bg-purple-600 px-2 py-2 text-base font-bold text-white hover:bg-pink-600 dark:bg-purple-300 dark:text-black dark:hover:bg-pink-300 md:px-6 md:py-3 md:text-lg"
+          class="ml-4 mt-2 inline-block rounded-md bg-amber-600 px-2 py-2 text-base font-bold text-white hover:bg-pink-600 dark:bg-amber-300 dark:text-black dark:hover:bg-pink-300 md:px-6 md:py-3 md:text-lg"
         >
           All Articles
         </a>
         <a
           href={import.meta.env.BASE_URL + 'categories'}
-          class="ml-4 mt-2 inline-block rounded-md bg-purple-100 px-2 py-2 text-base font-bold text-purple-800 hover:bg-pink-200 dark:bg-purple-900 dark:text-purple-100 dark:hover:bg-pink-900 md:px-6 md:py-3 md:text-lg"
+          class="ml-4 mt-2 inline-block rounded-md bg-amber-100 px-2 py-2 text-base font-bold text-amber-800 hover:bg-pink-200 dark:bg-amber-900 dark:text-amber-100 dark:hover:bg-pink-900 md:px-6 md:py-3 md:text-lg"
         >
           Categories
         </a>
         <a
           href={import.meta.env.BASE_URL + 'tags'}
-          class="ml-4 mt-2 inline-block rounded-md bg-purple-100 px-2 py-2 text-base font-bold text-purple-800 hover:bg-pink-200 dark:bg-purple-900 dark:text-purple-100 dark:hover:bg-pink-900 md:px-6 md:py-3 md:text-lg"
+          class="ml-4 mt-2 inline-block rounded-md bg-amber-100 px-2 py-2 text-base font-bold text-amber-800 hover:bg-pink-200 dark:bg-amber-900 dark:text-amber-100 dark:hover:bg-pink-900 md:px-6 md:py-3 md:text-lg"
         >
           Tags
         </a>
@@ -54,7 +54,7 @@ const otherPosts = posts.slice(1, 5)
                 newestPost.data.coverImage ||
                 newestPost.data.socialImage}
               alt={newestPost.data.title + ' featured image'}
-              class="h-64 w-full rounded-md bg-purple-100 object-cover dark:bg-purple-800 md:h-80"
+              class="h-64 w-full rounded-md bg-amber-100 object-cover dark:bg-amber-800 md:h-80"
             />
           </a>
           <div class="mt-4">
@@ -66,7 +66,7 @@ const otherPosts = posts.slice(1, 5)
           </div>
           <a href={import.meta.env.BASE_URL + 'blog/' + newestPost.slug}>
             <h1
-              class="mt-2 text-4xl font-bold leading-tight text-purple-600 hover:text-pink-600 dark:text-purple-300 dark:hover:text-pink-300"
+              class="mt-2 text-4xl font-bold leading-tight text-amber-600 hover:text-pink-600 dark:text-amber-300 dark:hover:text-pink-300"
             >
               {newestPost.data.title}
             </h1>
@@ -79,7 +79,7 @@ const otherPosts = posts.slice(1, 5)
           </p>
           <a
             href={import.meta.env.BASE_URL + 'blog/' + newestPost.slug}
-            class="mt-2 inline-block rounded-md bg-purple-600 px-6 py-3 text-white hover:bg-pink-600 dark:bg-purple-300 dark:text-black dark:hover:bg-pink-300"
+            class="mt-2 inline-block rounded-md bg-amber-600 px-6 py-3 text-white hover:bg-pink-600 dark:bg-amber-300 dark:text-black dark:hover:bg-pink-300"
           >
             Read more
             <span class="sr-only">{newestPost.data.title}</span>
@@ -104,7 +104,7 @@ const otherPosts = posts.slice(1, 5)
                       post.data.socialImage
                     }
                     alt={post.data.title + ' featured image'}
-                    class="block h-64 w-full rounded-md bg-purple-100 object-cover p-4 dark:bg-purple-800 md:h-32 md:p-0 lg:block"
+                    class="block h-64 w-full rounded-md bg-amber-100 object-cover p-4 dark:bg-amber-800 md:h-32 md:p-0 lg:block"
                   />
                 </a>
                 <div class="rounded bg-white px-4 dark:bg-gray-800 md:col-span-2">

@@ -34,7 +34,7 @@ const image =
     <h2 class="text-4xl font-bold leading-tight text-white">
       {frontmatter.title}
     </h2>
-    <h2 class="text-xl font-medium italic text-purple-200">
+    <h2 class="text-xl font-medium italic text-amber-200">
       {frontmatter.description}
     </h2>
     <span class="mt-3 flex">
@@ -47,11 +47,11 @@ const image =
               class="mr-2 h-10 w-10 rounded-full object-cover"
             />
             <Icon
-              class="mr-1 h-6 w-6 text-purple-200"
+              class="mr-1 h-6 w-6 text-amber-200"
               pack="heroicons-outline"
               name="user-circle"
             />
-            <span class="font-semibold text-purple-200">
+            <span class="font-semibold text-amber-200">
               {frontmatter.author}
             </span>
           </span>
@@ -59,21 +59,21 @@ const image =
       }
       <span class="mr-6 flex items-center">
         <Icon
-          class="mr-1 h-6 w-6 text-purple-200"
+          class="mr-1 h-6 w-6 text-amber-200"
           pack="heroicons-outline"
           name="calendar"
         />
-        <span class="ml-1 font-semibold text-purple-200">
+        <span class="ml-1 font-semibold text-amber-200">
           {new Date(frontmatter.publishDate).toString()}
         </span>
       </span>
       <span class="flex items-center">
         <Icon
-          class="mr-1 h-6 w-6 text-purple-200"
+          class="mr-1 h-6 w-6 text-amber-200"
           pack="heroicons-outline"
           name="clock"
         />
-        <span class="ml-1 font-semibold text-purple-200">
+        <span class="ml-1 font-semibold text-amber-200">
           {frontmatter.minutesRead}
         </span>
       </span>
