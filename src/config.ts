@@ -70,7 +70,7 @@ export const SiteMetadata = {
   buildTime: new Date(),
 }
 
-export const Logo = '../images/svg/astro/logomark-light.svg'
+export const Logo = '../images/svg/astro/logo.svg'
 export const LogoImage = '../images/astro/logo.png'
 export const FeaturedSVG = '../images/svg/undraw/undraw_design_inspiration.svg'
 export const DefaultSVG = '../images/svg/undraw/undraw_my_feed.svg'
