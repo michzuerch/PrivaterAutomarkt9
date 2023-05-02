@@ -72,6 +72,7 @@ export const SiteMetadata = {
 
 export const Logo = '../images/svg/astro/logo.svg'
 export const LogoImage = '../images/astro/logo.png'
+export const HeroImage = '../images/fotos/Hero.jpg'
 export const FeaturedSVG = '../images/svg/undraw/undraw_design_inspiration.svg'
 export const DefaultSVG = '../images/svg/undraw/undraw_my_feed.svg'
 export const DefaultImage = '../images/undraw/undraw_my_feed.png'
